@@ -1,0 +1,16 @@
+name: test-app
+memory: 1G
+stack: cflinuxfs2
+buildpack: predix_openresty_buildpack
+path: dist
+services:
+    - ie-predix-uaa
+    - event-service-redis
+    - ie-traffic-service
+env:
+    UAA_CLIENT_ID: #CLIENTID # ui_client1
+    UAA_CLIENT_CREDENTIALS: #CLIENTSECRET  # base 64 ecoded client_id:client_secret
+    UAA_URI: #UAAURI #Don't remove the # UAAURI comment as it will be replace with original value from VCAP_SERVICES using sh scripts
+    RESOURCE_URL: #RESOURCEURL #Don't remove the # RESOURCEURL comment as it will be replace with original value from VCAP_SERVICES using sh scripts
+    PREDIX_ZONE_ID: #PREDIXZONEID #Don't remove the # PREDIXZONEID comment as it will be replace with original value from VCAP_SERVICES using sh scripts
+    # CUSTOM_URL: seedapp.geintelligentcities.com

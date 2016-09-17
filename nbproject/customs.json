@@ -1,0 +1,11 @@
+{
+    "elements": {
+        "dom-module": {}
+    },
+    "attributes": {
+        "is": {
+            "context": "style"
+        },
+        "id": {}
+    }
+}
